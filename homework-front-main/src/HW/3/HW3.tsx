@@ -10,7 +10,7 @@ export const HW3 = () => {
   // - приложение должно компилироваться и запускаться в браузере
   // ❗ Массив с данными не трогаем! Текст не меняем !
 
-  const [currentText, setCurrentText] = useState('');
+  const [currentText, setCurrentText] = useState<string>('');
   const [texts, setTexts] = useState<string[]>([
     'То, что вы делаете по ночам, то и делает вас богатым. (Аль Капоне)',
   ]);
