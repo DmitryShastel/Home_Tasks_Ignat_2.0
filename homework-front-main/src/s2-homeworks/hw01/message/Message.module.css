@@ -1,16 +1,17 @@
 .message {
     height: 150px;
     margin-top: 60px;
-    margin-left: 60%;
+    margin-left: 50%;
 }
 
 .imageAndText {
     display: flex;
+    align-items: center;
 }
 
 .imageAndText img {
     width: 70px;
-    height: 70px;
+    height: 75px;
     border-radius: 50%;
 }
 
@@ -25,8 +26,8 @@
     mask: radial-gradient(100% 100% at var(--_p) 0, #0000 99%, #000 102%) var(--_p) 100%/var(--t) var(--t) no-repeat,
     linear-gradient(#000, #000) padding-box;
     background-color: blue;
-    color: white
-
+    color: white;
+    align-self: flex-start;
 }
 
 .text {
@@ -51,4 +52,5 @@
     color: black;
     font-size: 0.9em;
     font-weight: bold;
+    align-self: center;
 }
