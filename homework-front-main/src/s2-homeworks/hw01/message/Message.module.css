@@ -1,31 +1,54 @@
 .message {
-
+    height: 150px;
+    margin-top: 60px;
+    margin-left: 60%;
 }
 
 .imageAndText {
-
+    display: flex;
 }
 
 .imageAndText img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.text {
+    --r: 1em;
+    --t: 1.5em;
+
+    max-width: 800px;
+    padding: 1em;
+    border-inline: var(--t) solid #0000;
+    border-radius: calc(var(--r) + var(--t))/var(--r);
+    mask: radial-gradient(100% 100% at var(--_p) 0, #0000 99%, #000 102%) var(--_p) 100%/var(--t) var(--t) no-repeat,
+    linear-gradient(#000, #000) padding-box;
+    background-color: blue;
+    color: white
 
 }
 
 .text {
-
-}
-
-.text:after {
-
+    --_p: 100%;
+    border-bottom-right-radius: 0 0;
+    place-self: end;
 }
 
 .name {
-
+    margin: 5px 0 0 15px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .messageText {
-
+    margin: 5px 0 0 15px;;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .time {
-
+    margin: 5px 0 0 565px;
+    color: black;
+    font-size: 0.9em;
+    font-weight: bold;
 }
