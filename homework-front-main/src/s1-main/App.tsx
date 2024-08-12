@@ -2,6 +2,7 @@ import React from 'react'
 import s from './App.module.css'
 import HW2 from "../s2-homeworks/hw02/HW2";
 
+
 export function App() {
     return (
         <div className={s.App}>

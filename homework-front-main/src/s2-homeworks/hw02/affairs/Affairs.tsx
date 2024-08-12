@@ -71,6 +71,7 @@ function Affairs(props: AffairsPropsType) {
                 </button>
             </div>
             <div className={s.affairs}>{mappedAffairs}</div>
+                <hr/>
         </div>
     )
 }
