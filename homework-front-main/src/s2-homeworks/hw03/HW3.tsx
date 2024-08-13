@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-// import { v1 } from 'uuid'
+import React, {useState} from 'react'
 import s2 from '../../s1-main/App.module.css'
 import GreetingContainer from './GreetingContainer'
 
@@ -13,26 +12,30 @@ import GreetingContainer from './GreetingContainer'
 * 7 - в файле GreetingContainer.tsx дописать логику функций pureAddUser, pureOnBlur, pureOnEnter и проверить их тестами
 * 8 - в файле GreetingContainer.tsx вычислить количество добавленных и имя последнего (totalUsers, lastUserName)
 * 9 - в файле Greeting.tsx дописать типизацию пропсов
+*
 * 10 - в файле Greeting.tsx вычислить inputClass в зависимости от наличия ошибки
+*
 * 11 - сделать стили в соответствии с дизайном
 * */
 
-// types
+
 export type UserType = {
-    _id: any // need to fix any
-    name: any // need to fix any
+    _id: number
+    name: string
 }
 
-export const pureAddUserCallback = (name: any, setUsers: any, users: any) => { // need to fix any
-    const user = { // need to fix
+export const pureAddUserCallback = (name: string, setUsers: Function, users: UserType[]) => {
+    const user = {
+        _id: 100,
+        name: name
     }
     setUsers([...users, user])
 }
 
 const HW3 = () => {
-    const [users, setUsers] = useState<any>([]) // need to fix any
+    const [users, setUsers] = useState<UserType[]>([])
 
-    const addUserCallback = (name: any) => { // need to fix any
+    const addUserCallback = (name: string) => {
         pureAddUserCallback(name, setUsers, users)
     }
 
