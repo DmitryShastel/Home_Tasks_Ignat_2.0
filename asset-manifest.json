@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Home_Tasks_Ignat_2.0/static/css/main.225c0aeb.css",
-    "main.js": "/Home_Tasks_Ignat_2.0/static/js/main.187862d1.js",
+    "main.css": "/Home_Tasks_Ignat_2.0/static/css/main.5e104527.css",
+    "main.js": "/Home_Tasks_Ignat_2.0/static/js/main.a0c55311.js",
     "static/js/453.cea2f1e2.chunk.js": "/Home_Tasks_Ignat_2.0/static/js/453.cea2f1e2.chunk.js",
     "index.html": "/Home_Tasks_Ignat_2.0/index.html",
-    "main.225c0aeb.css.map": "/Home_Tasks_Ignat_2.0/static/css/main.225c0aeb.css.map",
-    "main.187862d1.js.map": "/Home_Tasks_Ignat_2.0/static/js/main.187862d1.js.map",
+    "main.5e104527.css.map": "/Home_Tasks_Ignat_2.0/static/css/main.5e104527.css.map",
+    "main.a0c55311.js.map": "/Home_Tasks_Ignat_2.0/static/js/main.a0c55311.js.map",
     "453.cea2f1e2.chunk.js.map": "/Home_Tasks_Ignat_2.0/static/js/453.cea2f1e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.225c0aeb.css",
-    "static/js/main.187862d1.js"
+    "static/css/main.5e104527.css",
+    "static/js/main.a0c55311.js"
   ]
 }
