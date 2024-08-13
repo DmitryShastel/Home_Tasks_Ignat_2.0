@@ -4,11 +4,10 @@ import {UserType} from './HW3'
 
 type GreetingContainerPropsType = {
     users: UserType[]
-    addUserCallback: (name: string) => void    // need to fix any
+    addUserCallback: (name: string) => void
 }
 
 export const pureAddUser = (name: string, setError: Function, setName: Function, addUserCallback: (name: string) => void) => {
-    // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
     if (name.trim() !== '') {
         addUserCallback(name)
         setName('')
@@ -17,13 +16,13 @@ export const pureAddUser = (name: string, setError: Function, setName: Function,
     }
 }
 
-export const pureOnBlur = (name: string, setError: Function) => { // если имя пустое - показать ошибку
+export const pureOnBlur = (name: string, setError: Function) => {
     if (name.trim() === '') {
         setError('Ошибка! Введите имя!')
     }
 }
 
-export const pureOnEnter = (e: KeyboardEvent | React.KeyboardEvent, addUser: Function) => { // если нажата кнопка Enter - добавить
+export const pureOnEnter = (e: KeyboardEvent | React.KeyboardEvent, addUser: Function) => {
     if (e.key === 'Enter') {
         addUser()
     }

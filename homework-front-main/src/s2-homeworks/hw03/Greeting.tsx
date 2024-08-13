@@ -32,8 +32,8 @@ const Greeting: React.FC<GreetingPropsType> = (
             <div className={s.text}>
                 {'Людей добавили: '}
                 <span id={'hw3-users-total'}>
-                    {totalUsers}
-                </span>
+                {totalUsers}
+            </span>
             </div>
 
             <div className={s.inputAndButtonContainer}>
@@ -46,19 +46,20 @@ const Greeting: React.FC<GreetingPropsType> = (
                         onKeyDown={onEnter}
                         onBlur={onBlur}
                     />
-                    <div id={'hw3-error'} className={s.error}>
-                        {error}
-                    </div>
                 </div>
-
                 <button
                     id={'hw3-button'}
                     onClick={addUser}
                     className={s.button}
                     disabled={!name.trim()}
                 >
-                    add
+                    Add
                 </button>
+
+            </div>
+
+            <div id={'hw3-error'} className={s.error}>
+                {error}
             </div>
 
             {lastUserName && (
