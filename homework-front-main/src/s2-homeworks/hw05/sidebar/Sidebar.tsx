@@ -1,5 +1,5 @@
 import React, {FC} from 'react'
-// import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import s from './Sidebar.module.css'
 import {PATH} from '../Pages'
 import closeIcon from './closeOutline.svg'
@@ -27,30 +27,30 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                 </button>
 
                 <nav id={'hw5-menu'} className={s.nav}>
-                    {/*<NavLink*/}
-                    {/*    id={'hw5-pre-junior-link'}*/}
-                    {/*    to={PATH.PRE_JUNIOR}*/}
-                    {/*    onClick={handleClose}*/}
-                    {/*    // className={...} // делает студент*/}
-                    {/*>*/}
-                    {/*    Pre-junior*/}
-                    {/*</NavLink>*/}
-                    {/*<NavLink*/}
-                    {/*    id={'hw5-junior-link'}*/}
-                    {/*    to={PATH.JUNIOR}*/}
-                    {/*    onClick={handleClose}*/}
-                    {/*    // className={...} // делает студент*/}
-                    {/*>*/}
-                    {/*    Junior*/}
-                    {/*</NavLink>*/}
-                    {/*<NavLink*/}
-                    {/*    id={'hw5-junior-plus-link'}*/}
-                    {/*    to={PATH.JUNIOR_PLUS}*/}
-                    {/*    onClick={handleClose}*/}
-                    {/*    // className={...} // делает студент*/}
-                    {/*>*/}
-                    {/*    Junior Plus*/}
-                    {/*</NavLink>*/}
+                    <NavLink
+                        id={'hw5-pre-junior-link'}
+                        to={PATH.PRE_JUNIOR}
+                        onClick={handleClose}
+                        className={s.active} // делает студент
+                    >
+                        Pre-junior
+                    </NavLink>
+                    <NavLink
+                        id={'hw5-junior-link'}
+                        to={PATH.JUNIOR}
+                        onClick={handleClose}
+                        className={s.active}
+                    >
+                        Junior
+                    </NavLink>
+                    <NavLink
+                        id={'hw5-junior-plus-link'}
+                        to={PATH.JUNIOR_PLUS}
+                        onClick={handleClose}
+                        className={s.active}
+                    >
+                        Junior Plus
+                    </NavLink>
                 </nav>
             </aside>
         </>
