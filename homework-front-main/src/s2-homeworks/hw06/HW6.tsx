@@ -19,9 +19,7 @@ const HW6 = () => {
     }
     const restore = () => {
         // делают студенты
-        if (value) {
-            setValue(value);
-        }
+        setValue(value)
     }
 
     return (
