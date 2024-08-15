@@ -8,6 +8,8 @@
 }
 
 .nav {
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav a {
@@ -17,6 +19,7 @@
 }
 
 .nav a.active {
+    color: #cc0000;
 }
 .close {
 }
