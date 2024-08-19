@@ -4,6 +4,7 @@ import HW5 from "../s2-homeworks/hw05/HW5";
 import HW7 from "../s2-homeworks/hw07/HW7";
 import HW8 from "../s2-homeworks/hw08/HW8";
 import HW9 from "../s2-homeworks/hw09/HW9";
+import HW10 from "../s2-homeworks/hw10/HW10";
 
 
 export function App() {
