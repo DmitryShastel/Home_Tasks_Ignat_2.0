@@ -56,8 +56,8 @@ function Clock() {
         return time < 10 ? `0${time}` : `${time}`
     }
 
-    let day: string = formatDate(date.getDay())
-    let month: string = formatDate(date.getMonth())
+    let day: string = formatDate(date.getDate())
+    let month: string = formatDate(date.getMonth() + 1)
     let year: string = formatDate(date.getFullYear())
 
     //day
@@ -88,7 +88,7 @@ function Clock() {
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <span id={'hw9-day'}>{stringDay}</span>{' '}
+                <span id={'hw9-day'}>{stringDay}</span>,{' '}
                 <span id={'hw9-time'}>
                     <strong>{stringTime}</strong>
                 </span>
@@ -98,7 +98,7 @@ function Clock() {
                 <div className={s.more}>
                     {show ? (
                         <>
-                            <span id={'hw9-month'}>{stringMonth}</span>{' '}
+                            <span id={'hw9-month'}>{stringMonth}</span>,{' '}
                             <span id={'hw9-date'}>{stringDate}</span>
                         </>
                     ) : (
