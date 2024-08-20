@@ -16,16 +16,21 @@ import SuperRange from "./common/c7-SuperRange/SuperRange";
 function HW11() {
     // for autotests // не менять // можно подсунуть в локалСторэдж нужные числа, чтоб увидеть как они отображаются
     const [value1, setValue1] = useState(restoreState<number>('hw11-value1', 0))
-    const [value2, setValue2] = useState(restoreState<number>('hw11-value2', 100))
+    const [value2, setValue2] = useState(restoreState<number[]>('hw11-value2', [value1, 100]))
 
     const change = (event: any, value: any) => {
         // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
-
-        if ([]) {
+        if (value.length == 1) {
+            // @ts-ignore
             setValue1(event.target.value)
+        }
+        if (value.length > 1) {
+            // @ts-ignore
+            console.log(event.target.value)
+// @ts-ignore
+            setValue1(event.target.value[0])
+            // @ts-ignore
             setValue2(event.target.value)
-        } else {
-            setValue1(event)
         }
     }
 
@@ -40,9 +45,8 @@ function HW11() {
                         <SuperRange
                             id={'hw11-single-slider'}
                             value={value1}
-                            onChange={change}
+                            onChange={(e) => change(e, [1])}
                             // сделать так чтоб value1 изменялось // пишет студент
-
                         />
                     </div>
                     <div className={s.wrapper}>
@@ -50,9 +54,8 @@ function HW11() {
                         <SuperRange
                             id={'hw11-double-slider'}
                             value={value2}
-                            onChange={change}
+                            onChange={(e) => change(e, [1, 2])}
                             // сделать так чтоб value1/2 изменялось // пишет студент
-
                         />
                         <span id={'hw11-value-2'} className={s.number}>{value2}</span>
                     </div>
