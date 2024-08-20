@@ -5,6 +5,7 @@ import HW7 from "../s2-homeworks/hw07/HW7";
 import HW8 from "../s2-homeworks/hw08/HW8";
 import HW9 from "../s2-homeworks/hw09/HW9";
 import HW10 from "../s2-homeworks/hw10/HW10";
+import HW11 from "../s2-homeworks/hw11/HW11";
 
 
 export function App() {
@@ -17,7 +18,7 @@ export function App() {
             {/*<HW4/>*/}
 
             {/*при выполнении дз 5 и более - закомментировать здесь дз 1-4, так как они есть внутри дз 5*/}
-            <HW5/>
+            <HW11/>
         </div>
     )
 }
