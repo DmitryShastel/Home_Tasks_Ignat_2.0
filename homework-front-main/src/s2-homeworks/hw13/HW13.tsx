@@ -40,7 +40,7 @@ const HW13 = () => {
                 console.log(res)
                 setImage(success200)
                 setText('...всё ок)')
-                setInfo(' код 200 - обычно означает что скорее всего всё ок)')
+                setInfo('код 200 - обычно означает что скорее всего всё ок)')
                 // дописать
             })
 
@@ -57,7 +57,7 @@ const HW13 = () => {
                         console.log(e);
                         setImage(error500);
                         setText('эмитация ошибки на сервере');
-                        setInfo('ошибка 500 - обычно означает, что что-то сломалось на сервере, например база данных');
+                        setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)');
                     } else if (e.response.status === 400) {
                         setCode('Код 400!');
                         console.log(e);
@@ -71,6 +71,10 @@ const HW13 = () => {
 
             })
     }
+
+    const textElement = document.getElementById('hw13-text');
+    console.log(textElement);
+    console.log(text)
 
     return (
         <div id={'hw13'}>
@@ -131,6 +135,7 @@ const HW13 = () => {
                         </div>
                         <div id={'hw13-text'} className={s.text}>
                             {text}
+
                         </div>
                         <div id={'hw13-info'} className={s.info}>
                             {info}
