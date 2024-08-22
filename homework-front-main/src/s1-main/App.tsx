@@ -7,6 +7,7 @@ import HW9 from "../s2-homeworks/hw09/HW9";
 import HW10 from "../s2-homeworks/hw10/HW10";
 import HW11 from "../s2-homeworks/hw11/HW11";
 import HW12 from "../s2-homeworks/hw12/HW12";
+import HW13 from "../s2-homeworks/hw13/HW13";
 
 
 export function App() {

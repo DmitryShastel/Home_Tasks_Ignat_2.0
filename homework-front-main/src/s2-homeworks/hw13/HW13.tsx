@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import s2 from '../../s1-main/App.module.css'
 import s from './HW13.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
-// import axios from 'axios'
+import axios from 'axios'
 import success200 from './images/200.svg'
 import error400 from './images/400.svg'
 import error500 from './images/500.svg'
@@ -26,23 +26,50 @@ const HW13 = () => {
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
                 : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
+
         setCode('')
         setImage('')
         setText('')
         setInfo('...loading')
 
-        // axios
-        //     .post(url, {success: x})
-        //     .then((res) => {
-        //         setCode('Код 200!')
-        //         setImage(success200)
-        //         // дописать
-        //
-        //     })
-        //     .catch((e) => {
-        //         // дописать
-        //
-        //     })
+
+        axios
+            .post(url, {success: x})
+            .then((res) => {
+                setCode(`Код ${res.status}!`)
+                console.log(res)
+                setImage(success200)
+                setText(res.data.info)
+                setInfo('')
+                // дописать
+            })
+            .catch((e) => {
+                if(e.response === undefined){
+                    console.log(e)
+                    setCode('Error!')
+                    setImage(errorUnknown)
+                    setText("it's very bed")
+                    setInfo('Error')
+                }
+                if(e.response.status === 500){
+                    setCode(`Код ${e.response.status}!`)
+                    console.log(e)
+                    setImage(error500)
+                    setText(e.response.data.info)
+                    setInfo('')
+                }
+                if(e.response.status === 400){
+                    setCode(`Код ${e.response.status}!`)
+                    console.log(e)
+                    setImage(error400)
+                    setText(e.response.data.info)
+                    setInfo('')
+                }
+
+
+                // дописать
+
+            })
     }
 
     return (
@@ -55,6 +82,7 @@ const HW13 = () => {
                         id={'hw13-send-true'}
                         onClick={send(true)}
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
@@ -64,6 +92,7 @@ const HW13 = () => {
                         id={'hw13-send-false'}
                         onClick={send(false)}
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
@@ -73,6 +102,7 @@ const HW13 = () => {
                         id={'hw13-send-undefined'}
                         onClick={send(undefined)}
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
@@ -82,6 +112,7 @@ const HW13 = () => {
                         id={'hw13-send-null'}
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
