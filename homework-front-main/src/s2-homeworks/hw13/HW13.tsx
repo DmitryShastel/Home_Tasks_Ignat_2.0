@@ -50,7 +50,7 @@ const HW13 = () => {
                     setCode('Error!');
                     setImage(errorUnknown);
                     setText("its very bad Error");
-                    setInfo('');
+                    setInfo('Error');
                 } else {
                     if (e.response.status === 500) {
                         setCode('Код 500!');
