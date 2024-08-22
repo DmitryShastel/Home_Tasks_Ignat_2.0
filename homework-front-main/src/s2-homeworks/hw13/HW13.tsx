@@ -39,8 +39,8 @@ const HW13 = () => {
                 setCode(`Код ${res.status}!`)
                 console.log(res)
                 setImage(success200)
-                setText(res.data.info)
-                setInfo('')
+                setText('...всё ок)')
+                setInfo('код 200 - обычно означает что скорее всего всё ок)')
                 // дописать
             })
             .catch((e) => {
@@ -52,18 +52,18 @@ const HW13 = () => {
                     setInfo('Error')
                 }
                 if(e.response.status === 500){
-                    setCode(`Код ${e.response.status}!`)
+                    setCode('Код 500!')
                     console.log(e)
                     setImage(error500)
-                    setText(e.response.data.info)
-                    setInfo('')
+                    setText('эмитация ошибки на сервере')
+                    setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
                 }
                 if(e.response.status === 400){
-                    setCode(`Код ${e.response.status}!`)
+                    setCode('Код 400!')
                     console.log(e)
                     setImage(error400)
-                    setText(e.response.data.info)
-                    setInfo('')
+                    setText('Ты не отправил success в body вообще!')
+                    setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
                 }
 
 
