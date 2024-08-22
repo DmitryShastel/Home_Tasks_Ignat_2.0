@@ -27,9 +27,9 @@ const HW13 = () => {
                 : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
 
-        setCode('')
-        setImage('')
-        setText('')
+        // setCode('')
+        // setImage('')
+        // setText('')
         setInfo('...loading')
 
 
@@ -39,8 +39,8 @@ const HW13 = () => {
                 setCode(`Код ${res.status}!`)
                 console.log(res)
                 setImage(success200)
-                setText('...всё ок)')
-                setInfo('код 200 - обычно означает что скорее всего всё ок)')
+                setText('')
+                setInfo('...всё ок) код 200 - обычно означает что скорее всего всё ок)')
                 // дописать
             })
 
@@ -49,8 +49,8 @@ const HW13 = () => {
                     console.log(e);
                     setCode('Error!');
                     setImage(errorUnknown);
-                    setText("it's very bad");
-                    setInfo('Error');
+                    setText("");
+                    setInfo('its very bad Error');
                 } else {
                     if (e.response.status === 500) {
                         setCode('Код 500!');
