@@ -39,32 +39,34 @@ const HW13 = () => {
                 setCode(`Код ${res.status}!`)
                 console.log(res)
                 setImage(success200)
-                setText('...всё ок)')
-                setInfo('код 200 - обычно означает что скорее всего всё ок)')
+                setText('')
+                setInfo(' ...всё ок) код 200 - обычно означает что скорее всего всё ок)')
                 // дописать
             })
+
             .catch((e) => {
-                if(e.response === undefined){
-                    console.log(e)
-                    setCode('Error!')
-                    setImage(errorUnknown)
-                    setText("it's very bed")
-                    setInfo('Error')
+                if (!e.response) {
+                    console.log(e);
+                    setCode('Error!');
+                    setImage(errorUnknown);
+                    setText("it's very bad");
+                    setInfo('Error');
+                } else {
+                    if (e.response.status === 500) {
+                        setCode('Код 500!');
+                        console.log(e);
+                        setImage(error500);
+                        setText('имитация ошибки на сервере');
+                        setInfo('ошибка 500 - обычно означает, что что-то сломалось на сервере, например база данных');
+                    } else if (e.response.status === 400) {
+                        setCode('Код 400!');
+                        console.log(e);
+                        setImage(error400);
+                        setText('Ты не отправил success в body вообще!');
+                        setInfo('ошибка 400 - обычно означает, что скорее всего фронт отправил что-то не то на бэк');
+                    }
                 }
-                if(e.response.status === 500){
-                    setCode('Код 500!')
-                    console.log(e)
-                    setImage(error500)
-                    setText('эмитация ошибки на сервере')
-                    setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
-                }
-                if(e.response.status === 400){
-                    setCode('Код 400!')
-                    console.log(e)
-                    setImage(error400)
-                    setText('Ты не отправил success в body вообще!')
-                    setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
-                }
+
 
 
                 // дописать
